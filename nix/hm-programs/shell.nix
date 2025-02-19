@@ -38,7 +38,19 @@
         history.save = 10000;
         history.ignoreDups = true;
 
-        initExtraFirst = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        initExtraBeforeCompInit = ''
+          # zmodload zsh/zprof
+
+          export ZINIT_HOME=$HOME/.zinit
+          source ${pkgs.zinit}/share/zinit/zinit.zsh
+          source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+
+          zinit light zsh-users/zsh-completions
+          zinit light zsh-users/zsh-autosuggestions
+          zinit light zsh-users/zsh-syntax-highlighting
+          zinit light Aloxaf/fzf-tab
+          zinit light cpitt/zsh-dotenv
+        '';
 
         initExtra = ''
           [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -47,26 +59,19 @@
           zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'\n
           zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'\n
           eval "$(fzf --zsh)"\n
-          eval "$(zoxide init zsh)"
+          eval "$(zoxide init zsh)"\n
+
+          clear
+
+          # zprof
         '';
 
         envExtra = ''
           export DOCKER_USER="$UID:$GID"
         '';
 
-        zplug = {
-          enable = true;
-          plugins = [
-            { name = "zsh-users/zsh-syntax-highlighting"; }
-            { name = "zsh-users/zsh-completions"; }
-            { name = "zsh-users/zsh-autosuggestions"; }
-            { name = "Aloxaf/fzf-tab"; }
-            { name = "cpitt/zsh-dotenv"; }
-          ];
-        };
-
         shellAliases = {
-          nixconfig = "sudo code /etc/nixos --no-sandbox --user-data-dir ~/.vscode-root";
+          dots = "code ~/.dotfiles";
           nsp = "nix-shell -p";
         };
       };
