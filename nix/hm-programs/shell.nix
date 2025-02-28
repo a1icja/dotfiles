@@ -68,6 +68,7 @@
 
         envExtra = ''
           export DOCKER_USER="$UID:$GID"
+          export NIXPKGS_ALLOW_UNFREE=1
         '';
 
         shellAliases = {

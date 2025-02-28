@@ -14,10 +14,14 @@
           github.copilot
           ms-azuretools.vscode-docker
           prisma.prisma
+          esbenp.prettier-vscode
         ];
         userSettings = {
           "workbench.colorTheme" = "Atomize";
           "editor.tabSize" = 2;
+          "[typescript]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
         };
       };
     };

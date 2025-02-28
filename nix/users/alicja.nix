@@ -13,6 +13,7 @@
       slack
       gnome-tweaks
       jetbrains.datagrip
+      zoom-us
     ];
   };
 }
