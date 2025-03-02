@@ -62,6 +62,11 @@ in
 
   services.fwupd.enable = true;
 
+  services.tailscale.enable = true;
+
+  services.flatpak.enable = true;
+
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -83,7 +88,6 @@ in
     vim
     wget
     curl
-    nixfmt-rfc-style
   ];
 
   # Move the nix configuration out of /etc/nixos

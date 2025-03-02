@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
   users.users.alicja = {
     isNormalUser = true;
@@ -13,7 +13,9 @@
       slack
       gnome-tweaks
       jetbrains.datagrip
-      zoom-us
+      remmina
+      spotify
+      nixfmt-rfc-style
     ];
   };
 }
