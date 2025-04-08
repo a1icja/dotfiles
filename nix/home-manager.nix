@@ -12,6 +12,7 @@ in
 
   # Home Manager Config
   home-manager.useGlobalPkgs = true;
+  home-manager.backupFileExtension = "nixbackup";
 
   home-manager.users.alicja =
     { pkgs, lib, ... }:

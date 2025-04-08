@@ -22,6 +22,7 @@
           "[typescript]" = {
             "editor.defaultFormatter" = "esbenp.prettier-vscode";
           };
+          "window.titleBarStyle" = "custom";
         };
       };
     };

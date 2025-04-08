@@ -16,6 +16,7 @@
       remmina
       spotify
       nixfmt-rfc-style
+      nautilus
     ];
   };
 }

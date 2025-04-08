@@ -66,6 +66,9 @@ in
 
   services.flatpak.enable = true;
 
+  # This thing is annoying and unnecessary
+  systemd.services.NetworkManager-wait-online.enable = false;
+
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -122,4 +125,5 @@ in
       };
     };
 
+  networking.firewall.enable = true;
 }
