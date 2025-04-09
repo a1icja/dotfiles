@@ -25,7 +25,7 @@
 
           text-color = "#4e4e5f";
 
-          prompt-text = " : ";
+          prompt-text = " : ";
 
           background-color = "#11111bd9";
           selection-color = "#83A4E7";
