@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   users.users.alicja = {
     isNormalUser = true;
@@ -17,6 +17,7 @@
       spotify
       nixfmt-rfc-style
       nautilus
+      inputs.zen-browser.packages."${system}".default
     ];
   };
 }

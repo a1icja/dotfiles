@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
-    <home-manager/nixos>
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   home-manager.users.alicja =

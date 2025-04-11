@@ -84,9 +84,6 @@ in
     pulse.enable = true;
   };
 
-  # Ensure there's a browser available
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -124,6 +121,7 @@ in
       "1password/custom_allowed_browsers" = {
         text = ''
           firefox
+          zen
         '';
         mode = "0755";
       };

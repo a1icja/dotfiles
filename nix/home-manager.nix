@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 let
   hmProgramsFolder = lib.filter
@@ -7,7 +7,7 @@ let
 in
 {
   imports = [
-    <home-manager/nixos>
+    inputs.home-manager.nixosModules.home-manager
   ] ++ hmProgramsFolder;
 
   # Home Manager Config
