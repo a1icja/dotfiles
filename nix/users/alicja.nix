@@ -13,11 +13,14 @@
       slack
       gnome-tweaks
       jetbrains.datagrip
+      jetbrains.clion
       remmina
       spotify
       nixfmt-rfc-style
       nautilus
       inputs.zen-browser.packages."${system}".default
+      hyprshot
+      fastfetch
     ];
   };
 }
