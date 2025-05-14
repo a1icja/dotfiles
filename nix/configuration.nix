@@ -55,6 +55,11 @@ in
   security.pam.services.hyprlock = {};
   # services.connman.enable = true;
 
+  # Fingerprint Reader
+  services.fprintd.enable = true;
+  services.fprintd.tod.enable = true;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -92,7 +97,10 @@ in
     vim
     wget
     curl
+    fprintd
   ];
+
+  hardware.intel-gpu-tools.enable = true;
 
   # Move the nix configuration out of /etc/nixos
   nix.nixPath = [
