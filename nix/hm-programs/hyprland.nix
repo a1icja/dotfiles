@@ -42,13 +42,7 @@
 
           monitor = [
             # Main Laptop Display
-            "eDP-1,2560x1600@60,0x0,1.6"
-            # Rear HDMI Port
-            "HDMI-A-5,1920x1080@60,auto-up,1"
-            # USB-C PD Port
-            "DP-3,1920x1080@60,auto-left,1"
-            # USB-C 10Gbps Port
-            "DP-4,1920x1080@60,auto-right,1"
+            "eDP-1,1920x1080@60,0x0,1.25"
           ];
 
           
@@ -253,7 +247,7 @@
             "nm-applet --indicator"
             "dunst"
             "waybar"
-            "swww-daemon && swww img --outputs eDP-1,HDMI-A-5,DP-3,DP-4 ~/.dotfiles/assets/backgrounds/cat_leaves.png"
+            "swww-daemon && swww img --outputs eDP-1 ~/.dotfiles/assets/backgrounds/cat_leaves.png"
           ];
 
           xwayland = {

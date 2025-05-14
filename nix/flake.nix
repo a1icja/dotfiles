@@ -1,5 +1,5 @@
 {
-  description = "Eniac NixOS Config";
+  description = "Univac NixOS Config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
@@ -25,7 +25,7 @@
       ...
     }@inputs:
     {
-      nixosConfigurations.eniac2 = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.univac = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = { inherit inputs; };

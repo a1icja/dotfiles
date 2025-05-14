@@ -11,7 +11,7 @@ in
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./home-manager.nix
-    ./graphics/nvidia.nix
+    #./graphics/nvidia.nix
     ./battery.nix
   ] ++ usersFolder;
 
@@ -19,7 +19,7 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "eniac2"; # Define your hostname.
+  networking.hostName = "univac"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # Enable flakes and nix-command
