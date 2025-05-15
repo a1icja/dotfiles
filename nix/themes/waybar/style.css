@@ -1,10 +1,13 @@
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 10px;
   font-family: JetBrainsMono Nerd Font, monospace;
   font-weight: bold;
   font-size: 14px;
   min-height: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
 window#waybar {
@@ -15,7 +18,7 @@ window#waybar {
 #workspaces button {
   padding: 5px;
   color: #555869;
-  margin-right: 5px;
+  margin-right: 0;
 }
 
 #workspaces button.active {
@@ -51,74 +54,73 @@ window#waybar {
 #tray,
 #backlight {
   background: #1e1e2e;
-  padding: 0px 10px;
-  margin: 3px 0px;
-  margin-top: 5px;
-  /* border: 1px solid #181825; */
+  padding: 0;
+  margin: 2px 0px;
+  border-radius: 10px;
 }
 
 #backlight {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
 }
 
 #tray {
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 0;
 }
 
 #workspaces {
   background: #1e1e2e;
   border-radius: 10px;
-  margin-left: 10px;
+  margin-left: 0;
   padding-right: 0px;
   padding-left: 5px;
 }
 
 #cpu {
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+  border-radius: 10px;
+  margin-right: 0;
 }
 
 #memory {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
 }
 
 #window {
   border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #clock {
   color: #a6adc8;
-  border-radius: 10px 10px 10px 10px;
-  margin-left: 5px;
+  border-radius: 10px;
+  margin-left: 0;
   border-right: 0px;
 }
 
 #network {
   color:  #a6adc8;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
 
 }
 
 #pulseaudio {
   color: #a6adc8;
+  border-radius: 10px;
   border-left: 0px;
   border-right: 0px;
 }
 
 #pulseaudio.microphone {
   color: #a6adc8;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px;
   border-left: 0px;
   border-right: 0px;
-  margin-right: 5px;
+  margin-right: 0;
 }
 
 #battery {
   color:#a6adc8;
-  /* border-radius: 0px 10px 10px 0px; */
-  border-radius: 10px 10px 10px 10px;
-  margin-right: 10px;
+  border-radius: 10px;
+  margin-right: 0;
 }

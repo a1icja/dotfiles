@@ -15,19 +15,20 @@
         settings = {
           mainBar = {
             layer = "top";
-            position = "top";
+            position = "left";
             mode = "dock";
             exclusive = true;
             passthrough = false;
             "gtk-layer-shell" = true;
-            height = 0;
+            height = 864;
+            width = 0;
 
             modules-left = [
               "clock"
               "hyprland/workspaces"
             ];
             modules-center = [
-              "hyprland/window"
+              #"hyprland/window"
             ];
             modules-right = [
               "tray"
@@ -57,7 +58,7 @@
             };
 
             clock = {
-              format = "{:%Y-%m-%d  %H:%M}";
+              format = "{:%m\n%d\n\n%H\n%M}";
               interval = 1;
               rotate = 0;
               "tooltip-format" = "<tt>{calendar}</tt>";
@@ -77,7 +78,7 @@
 
             backlight = {
               device = "intel_backlight";
-              format = "{icon} {percent}%";
+              format = "Bri\n{percent}";
               "format-icons" = [
                 "󰃞"
                 "󰃟"
@@ -85,7 +86,7 @@
               ];
               "on-scroll-up" = "brightnessctl set 1%+";
               "on-scroll-down" = "brightnessctl set 1%-";
-              "min-length" = 6;
+              "min-length" = 4;
             };
 
             battery = {
@@ -94,9 +95,9 @@
                 warning = 30;
                 critical = 20;
               };
-              format = "{icon} {capacity}%";
-              "format-charging" = " {capacity}%";
-              "format-plugged" = " {capacity}%";
+              format = "Bat\n{capacity}";
+              "format-charging" = "Chg\n{capacity}";
+              "format-plugged" = "Plg\n{capacity}";
               "format-alt" = "{time} {icon}";
               "format-icons" = [
                 "󰂃"
@@ -114,9 +115,9 @@
             };
 
             pulseaudio = {
-              format = "{icon}  {volume}%";
+              format = "Vol\n{volume}";
               tooltip = false;
-              "format-muted" = "  Muted";
+              "format-muted" = "Vol\nM";
               "on-click" = "pamixer -t";
               "on-scroll-up" = "pamixer -i 1";
               "on-scroll-down" = "pamixer -d 1";
@@ -139,8 +140,8 @@
 
             "pulseaudio#microphone" = {
               format = "{format_source}";
-              "format-source" = " {volume}%";
-              "format-source-muted" = "  Muted";
+              "format-source" = "Mic\n{volume}";
+              "format-source-muted" = "Mic\nM";
               "on-click" = "pamixer --default-source -t";
               "on-scroll-up" = "pamixer --default-source -i 5";
               "on-scroll-down" = "pamixer --default-source -d 5";
